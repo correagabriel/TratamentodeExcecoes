@@ -1,10 +1,11 @@
 package TRY;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Locale;
 
 public class Try {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in).useLocale(Locale.US);
 
             try{
                 System.out.println("Digite o seu nome : ");
@@ -19,7 +20,7 @@ public class Try {
                 System.out.println("Digite a sua altura : ");
                 Double altura = entrada.nextDouble();
 
-                    System.out.println("Hello, " + nome.toUpperCase());
+                    System.out.println("Hello, " + nome + " " + sobrenome);
                     System.out.println("Tenho " + idade + " anos ");
                     System.out.println("Minha altura é " + altura );
                     entrada.close();
@@ -27,7 +28,7 @@ public class Try {
 
             catch(InputMismatchException e){
                 //equivocando os dados
-                System.out.println("Os campos IDADE & ALTURA foram preenchidos de maneira incorrete");
+                System.out.println("Os campos IDADE &||OR ALTURA foram preenchidos de maneira incorrete");
             }
     }
 }
